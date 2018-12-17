@@ -15,12 +15,7 @@ The instructions for this project are located in the `instructions.md` file.
 
 class App extends Component {
   state = {
-    users: [
-      {username: 'asdasdsd',
-      numGamesPlayed: 3},
-      {username: 'dsdasdasd',
-      numGamesPlayed: 4}
-    ],
+    users: [],
   };
 
   addUser = (user) => {
