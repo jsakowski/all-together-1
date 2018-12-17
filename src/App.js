@@ -22,6 +22,13 @@ class App extends Component {
       numGamesPlayed: 4}
     ],
   };
+
+  addUser = (user) => {
+    user.numGamesPlayed = 0;
+    this.setState((currentState) => ({
+      users: [...currentState.users, user]
+    }))
+  };
  
   render() {
     return (
@@ -30,7 +37,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
         </header>
-        <AddUser />
+        <AddUser users={this.state.users} onAddUser={this.addUser}  />
         <UserList users={this.state.users} />
       </div>
     );

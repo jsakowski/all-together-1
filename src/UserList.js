@@ -30,16 +30,15 @@ const gamesPlayedButton = (
       </div>
     );
 
-
     return (
       <div>
         <h1>Users</h1>
         {users && users.length > 0 ? gamesPlayedButton : ''}
-        {
-          users.map(user => (
+        <ol>
+        {users.map(user => (
             <User key={user.username} user={user} showGamesPlayed={showGamesPlayed} />
-          ))
-        }
+         ))}
+        </ol>
       </div>
     )
   }
